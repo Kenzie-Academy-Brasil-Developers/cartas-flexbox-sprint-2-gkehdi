@@ -17,16 +17,28 @@ html {
 
 .card__description {
     /* display, flex-direction, justify-content, align-items */
-    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 0 0;
+    width: 236.6px;
+    height: 130px;
+    
 }
 
-.card__descriptionIcon {font-size: 32px; margin-bottom: 10px;}
+.card__descriptionIcon {
+  font-size: 40px;
+  margin-bottom: 50px;
+  height:5px;
+}
 
 .card__descriptionText {
     color: #57727C;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 0px);
+    height: 50px;
 }
 
 .card__price {
@@ -34,24 +46,36 @@ html {
     color: #57727C;
     font-size: 12px;
     font-weight: 700;
-    padding: 5px 15px;
+    padding: 5px;
     border-top: 1px solid #D7DBDD;
     background-color: #EEF3F5;
+    height: 15px;
+    padding:10px;
+    font-weight: bolder;
+    font-size: 14px;
+    
 }
 
 .cardGroup {
     /* display */
-  
+    display: flex;
+    flex-direction: row;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
+    margin: 0 auto;
+    width: 710px;
+   
   }
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
-  
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
       border: none;
       border-radius: 0;
+      
     }
   
     .cardGroup__card {
@@ -60,4 +84,41 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
     }
+    @media (min-width:321px) and (max-width:1024px){
+
+      .cardGroup{
+
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #CAD0D2;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 0 auto;
+        
+      }
+    }
+    @media (max-width: 320px)
+    {
+      .cardGroup{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #CAD0D2;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .card__price {
+        width: 100%;
+        
+      }
+      .card__description {
+        
+        width: 100%;
+       
+    }
+  }
